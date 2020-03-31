@@ -5,3 +5,4 @@ print(workdays)
 workdays.remove('sat')
 workdays.remove('sun')
 print(workdays)
+

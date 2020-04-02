@@ -1,0 +1,39 @@
+import  os
+choiceChart = ['load data', 'export data', 'analyze & predict']
+
+def start():
+    print("Proszę wybrać jedną z opcji - Wybierz jedną: ")
+    print(choiceChart[0] + "[1]")
+    print(choiceChart[1] + "[2]")
+    print(choiceChart[2] + "[3]")
+
+    print("Wybieram opcję numer : ")
+
+def isDigit():
+    choice = check()
+    if choice.isdigit() and 0<int(choice)<=3:
+
+        if '1' in choice:
+            print("Wbrano 1")
+        if '2' in choice:
+            print("Wbrano 2")
+        if '3' in choice:
+            print("Wbrano 3")
+    else:
+        print("Wybór musi być liczbą między 1 a 3! Spróbuj ponownie")
+        main()
+
+def check():
+    try:
+        choice = input()
+    except:
+        print("Problem")
+
+    return choice
+def main():
+
+    start()
+    isDigit()
+
+
+main()

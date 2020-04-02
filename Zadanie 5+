@@ -38,22 +38,19 @@ options = ['load data', 'export data', 'analyze & predict']
 choice = 'x'
 
 def displayOptions():
-    print("1 - ", options[0])
-    print("2 - ", options[1])
-    print("3 - ", options[2])
-    print(("Select option above or press enter to exit: "))
-    choice = input()
-    choice = str(choice)
+    for i in range(len(options)):
+        print("{} - {}".format(i+1, options[i]))
+    choice = input("Select option above or press enter to exit: ")
     return choice
 
 
-while choice != '':
+while choice:
     choice = displayOptions()
     if choice != '':
         try:
             choice_num=int(choice)-1
             if choice_num<len(options) and choice_num>=0:
-                print("Wybrano opcję numer: ", choice)
+                print("Wybrano opcję nume {} - {}".format(choice_num+1, options[choice_num]))
             else:
                 print("Dokonano nieprawidłowego wybotu")
         except:

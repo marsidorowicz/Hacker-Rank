@@ -48,3 +48,16 @@ if __name__ == '__main__':
     fptr.write('\n')
 
     fptr.close()
+
+#alt
+
+def compare_triplets(a, b):
+    results = []
+    for a_value, b_value in zip(a, b):
+        results.append(1 if a_value > b_value else 0)
+
+    return results
+
+
+# test
+print(compare_triplets([1, 2, 3], [3, 2, 1]))

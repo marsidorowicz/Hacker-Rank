@@ -51,7 +51,7 @@ if __name__ == '__main__':
 
 #alt
 
-def compare_triplets(a, b):
+def compare_triplets1(a, b):
     results = []
     for a_value, b_value in zip(a, b):
         results.append(1 if a_value > b_value else 0)
